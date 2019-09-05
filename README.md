@@ -7,17 +7,17 @@ Download the script and include it in your html file.
 The script expects certain classes to be available by default. For the html, 
 
 ```html
-<div class="carousel-container">
-  <div class="carousel-content">
-    <div class="carousel-slide">
+<div class="sj-carousel-container">
+  <div class="sj-carousel-content">
+    <div class="sj-carousel-slide">
     ...
     </div>
     ...
-    <div class="carousel-indicators"></div>
-    <div class="carousel-indicators"></div>
+    <div class="sj-carousel-indicators"></div>
+    <div class="sj-carousel-indicators"></div>
     ...
-    <div class="carousel-next"></div>
-    <div class="carousel-prev"></div>
+    <div class="sj-carousel-next"></div>
+    <div class="sj-carousel-prev"></div>
   </div>
 </div>
 ```
@@ -31,11 +31,11 @@ carousel = new SJCarousel()
 and the following styles
 
 ```css
-.carousel-content {
+.sj-carousel-content {
   display: flex;
   transition: transform 1s ease;
 }
-.carousel-slide {
+.sj-carousel-slide {
   flex: 0 0 auto;
 }
 ```
@@ -45,7 +45,7 @@ and the following styles
 The carousel accepts two arguments:
 
 ### Container element selector
-Optional. The container element for the carousel. It defaults to `.carousel-container`. You can pass a custom selector or even a dom node.
+Optional. The container element for the carousel. It defaults to `.sj-carousel-container`. You can pass a custom selector or even a dom node.
 
 ### Options
 - `autoScroll` - Boolean to automatically scroll the carousel as soon as it is rendered. Dafaults to `false`

@@ -1,6 +1,6 @@
 class SJCarousel {
   indicatorListeners = []
-  constructor(el = '.carousel-container', {
+  constructor(el = '.sj-carousel-container', {
     autoScroll,
     visibleCount,
     keyboardListenerOnDoc
@@ -9,9 +9,9 @@ class SJCarousel {
     if (!this.carouselContainer) {
       return;
     }
-    this.carouselElements = Array.from(this.carouselContainer.querySelectorAll('.carousel-slide'));
+    this.carouselElements = Array.from(this.carouselContainer.querySelectorAll('.sj-carousel-slide'));
     this.containerWidth = this.carouselContainer.getBoundingClientRect().width;
-    this.carouselContent = this.carouselContainer.querySelector('.carousel-content');
+    this.carouselContent = this.carouselContainer.querySelector('.sj-carousel-content');
     this.activeElement = 0;
     this.visibleCount = visibleCount || 1;
     this.keyboardListenerOnDoc = keyboardListenerOnDoc;
@@ -42,7 +42,7 @@ class SJCarousel {
     this.carouselContent.style.transform = `translateX(${position * (this.containerWidth / this.visibleCount) * -1}px)`;
   }
   addIndicatorEvents() {
-    this.carouselIndicators = Array.from(this.carouselContainer.querySelectorAll('.carousel-indicators'));
+    this.carouselIndicators = Array.from(this.carouselContainer.querySelectorAll('.sj-carousel-indicators'));
     this.carouselIndicators.forEach((indicator, index) => {
       let cb = () => {
         this.goToElement(index);
@@ -90,14 +90,14 @@ class SJCarousel {
     }
   }
   setLeftRightNavigation() {
-    let prev = document.querySelector('.carousel-prev');
-    let next = document.querySelector('.carousel-next');
+    let prev = document.querySelector('.sj-carousel-prev');
+    let next = document.querySelector('.sj-carousel-next');
     prev.addEventListener('click', this.goToPrev);
     next.addEventListener('click', this.goToNext);
   }
   removeLeftRightNavigation() {
-    let prev = document.querySelector('.carousel-prev');
-    let next = document.querySelector('.carousel-next');
+    let prev = document.querySelector('.sj-carousel-prev');
+    let next = document.querySelector('.sj-carousel-next');
     prev.removeEventListener('click', this.goToPrev);
     next.removeEventListener('click', this.goToNext);
   }
@@ -120,10 +120,4 @@ class SJCarousel {
   }
 }
 
-// window.addEventListener('DOMContentLoaded', () => {
-//   carousel = new SJCarousel('.carousel-container', {
-//     autoScroll: true,
-//     visibleCount: 2,
-//     keyboardListenerOnDoc: true
-//   });
-// });
+module.exports = SJCarousel;
