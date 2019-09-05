@@ -1,0 +1,33 @@
+{
+  "name": "simple-js-carousel",
+  "version": "0.0.1",
+  "description": "A JS carousel that supports keyboard navigation and cleaning up registered event listeners",
+  "main": "simple-js-carousel.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/akashdsouza/simple-js-carousel.git"
+  },
+  "keywords": [
+    "carousel",
+    "js"
+  ],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/akashdsouza/simple-js-carousel/issues"
+  },
+  "homepage": "https://github.com/akashdsouza/simple-js-carousel#readme",
+  "devDependencies": {
+    "@babel/core": "^7.5.5",
+    "@babel/plugin-proposal-class-properties": "^7.5.5",
+    "@babel/preset-env": "^7.5.5",
+    "babel-loader": "^8.0.6",
+    "terser-webpack-plugin": "^2.0.0",
+    "uglifyjs-webpack-plugin": "^2.2.0",
+    "webpack": "^4.39.3",
+    "webpack-cli": "^3.3.7"
+  }
+}
