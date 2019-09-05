@@ -26,6 +26,13 @@ class SJCarousel {
       this.autoScroll();
     }
   }
+  rAF(callback) {
+    if (window.requestAnimationFrame) {
+      window.requestAnimationFrame(callback);
+    } else {
+      window.setTimeout(callback, 1000 / 60)
+    }
+  }
   autoScroll() {
     this.scrollTimeout = setTimeout(() => {
       this.goToNext();
@@ -68,11 +75,12 @@ class SJCarousel {
   }
   keydownHandler = ({ keyCode }) => {
     if (keyCode === 37) {
+      // Using requestAnimationFrame due to weird chrome bug: https://stackoverflow.com/questions/57753794/weird-keydown-behavior-in-chrome-when-triggered-simultaneously
       // Left key
-      this.goToPrev();
+      this.rAF(this.goToPrev);
     } else if (keyCode === 39) {
       // Right key
-      this.goToNext();
+      this.rAF(this.goToNext);
     }
   }
   addKeyboardEvents() {
