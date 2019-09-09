@@ -59,6 +59,10 @@ Optional. The container element for the carousel. It defaults to `.sj-carousel-c
 
 The keyboard listeners are registered on the parent carousel container. To trigger these, the parent container should be in focus. To make a `div` focussable, add attribute `tabindex=0` to the container.
 
+```html
+<div class="sj-carousel-container" tabindex=0>
+```
+
 For cases, where it might make sense to simply attach the event listener to the document instead of the container, set `keyboardListenerOnDoc` to `true`
 
 ## Why another carousel?
