@@ -1,7 +1,10 @@
+.sj-carousel-container {
+  overflow: hidden;
+}
 .sj-carousel-content {
   display: flex;
   transition: transform 1s ease;
 }
 .sj-carousel-slide {
-  flex: 0 0 auto;
+  flex: 0 0 100%;
 }

@@ -4,7 +4,9 @@
   "description": "A JS carousel that supports keyboard navigation and cleaning up registered event listeners",
   "main": "simple-js-carousel.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "watch": "webpack --watch",
+    "start": "npm run watch & webpack-dev-server --open"
   },
   "repository": {
     "type": "git",
@@ -28,6 +30,7 @@
     "terser-webpack-plugin": "^2.0.0",
     "uglifyjs-webpack-plugin": "^2.2.0",
     "webpack": "^4.39.3",
-    "webpack-cli": "^3.3.7"
+    "webpack-cli": "^3.3.7",
+    "webpack-dev-server": "^3.8.0"
   }
 }

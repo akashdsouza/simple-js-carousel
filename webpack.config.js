@@ -7,7 +7,11 @@ module.exports = {
   output: {
     filename: 'simple-js-carousel.js',
     path: path.resolve(__dirname, 'dist'),
-    library: 'SJCarousel'
+    library: 'SJCarousel',
+  },
+  devServer: {
+    contentBase: path.resolve(__dirname, '.'),
+    publicPath: '/dist/'
   },
   module: {
     rules: [

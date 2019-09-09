@@ -31,6 +31,9 @@ carousel = new SJCarousel()
 and the following styles
 
 ```css
+.sj-carousel-container {
+  overflow: hidden;
+}
 .sj-carousel-content {
   display: flex;
   transition: transform 1s ease;
