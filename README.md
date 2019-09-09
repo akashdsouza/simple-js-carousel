@@ -36,6 +36,7 @@ and the following styles
 }
 .sj-carousel-content {
   display: flex;
+  /* Update this property to change animation duration */
   transition: transform 1s ease;
 }
 .sj-carousel-slide {
@@ -67,6 +68,6 @@ For cases, where it might make sense to simply attach the event listener to the 
 
 ## Why another carousel?
 
-Carousels are usually used once on a web page. However, there may be cases where a carousel would have to be removed based on user interactions. It is common to set `display: none` on the container element and call it a day. But, depending on your use case, this might lead to a bunch to event listeners which are never removed and start leaking memory.
+Carousels are usually used once on a web page. However, there may be cases where a carousel would have to be removed based on user interactions. It is common to set `display: none` on the container element and call it a day. But, depending on your use case, this might lead to a bunch of event listeners which are never removed and start leaking memory.
 
 Simple JS Carousel provides an easy method to remove all event listeners attached on the carousel. The script also includes support for keyboard navigation.
