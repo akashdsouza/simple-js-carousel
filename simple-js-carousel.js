@@ -12,6 +12,7 @@ class SJCarousel {
     this.carouselElements = Array.from(this.carouselContainer.querySelectorAll('.sj-carousel-slide'));
     this.containerWidth = this.carouselContainer.getBoundingClientRect().width;
     this.carouselContent = this.carouselContainer.querySelector('.sj-carousel-content');
+    this.carouselIndicators = Array.from(this.carouselContainer.querySelectorAll('.sj-carousel-indicators'));
     this.activeElement = 0;
     this.visibleCount = visibleCount || 1;
     this.keyboardListenerOnDoc = keyboardListenerOnDoc;
@@ -46,6 +47,13 @@ class SJCarousel {
   }
   goToElement(position) {
     this.activeElement = position;
+    this.carouselIndicators.forEach((indicator, index) => {
+      if (index === position) {
+        indicator.className += ' sjc-active';
+      } else {
+        indicator.className = indicator.className.replace(' sjc-active', '');
+      }
+    });
     this.carouselContent.style.transform = `translateX(${position * (this.containerWidth / this.visibleCount) * -1}px)`;
   }
   addIndicatorEvents() {
