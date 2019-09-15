@@ -2,9 +2,25 @@
 <html>
   <head>
     <link rel="stylesheet" type="text/css" href="simple-js-carousel.css" />
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Slab&display=swap" rel="stylesheet">
     <style>
-      h1 {
+      body {
+        font-family: 'Roboto Slab';
+        margin: 0;
+      }
+      header {
+        padding: 2em;
+        color: #fff;
+        background-color: #000;
         text-align: center;
+      }
+      h1 {
+        margin: 0;
+        padding: 1.5em;
+      }
+      header img {
+        width: 25px;
+        height: auto;
       }
       img {
         height: 300px;
@@ -18,9 +34,12 @@
       .sj-carousel-container {
         position: relative;
       }
+      .indicators {
+        text-align: center;
+      }
       .sj-carousel-indicators {
-        border: 1px solid royalblue;
-        background-color: aquamarine;
+        border: 1px solid #000;
+        background-color: #fff;
         width: 10px;
         height: 10px;
         border-radius: 50px;
@@ -31,20 +50,29 @@
       }
       .sj-carousel-next, .sj-carousel-prev {
         position: absolute;
-        bottom: 0px;
+        top: 50%;
+        transform: translateY(-50%);
         cursor: pointer;
         font-size: 30px;
+        border-radius: 50%;
+        background-color: #fbfafa;
+        padding: 0px 7px;
       }
       .sj-carousel-next {
         right: 5%;
       }
       .sj-carousel-prev {
-        right: 8%;
+        left: 5%;
       }
     </style>
   </head>
   <body>
-    <h1>Simple JS Carousel</h1>
+    <header>
+      <h1>Simple JS Carousel</h1>
+      <a href="https://github.com/akashdsouza/simple-js-carousel">
+        <img src="./dist/GitHub-Mark-Light-120px-plus.png" alt="Github logo - navigate to simple-js-carousel repo">
+      </a>
+    </header>
     <div class="container">
       <div class="sj-carousel-container">
         <div class="sj-carousel-content">
@@ -61,17 +89,24 @@
             <img src="./dist/img4.jpg" alt="Mountains" />
           </div>
         </div>
-        <div class="sj-carousel-indicators"></div>
-        <div class="sj-carousel-indicators"></div>
-        <div class="sj-carousel-indicators"></div>
-        <div class="sj-carousel-indicators"></div>
-        <div class="sj-carousel-next">&gt;</div>
-        <div class="sj-carousel-prev">&lt;</div>
+        <div class="indicators">
+          <div class="sj-carousel-indicators"></div>
+          <div class="sj-carousel-indicators"></div>
+          <div class="sj-carousel-indicators"></div>
+          <div class="sj-carousel-indicators"></div>
+        </div>
+        <div class="sj-carousel-prev">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-left"><polyline points="15 18 9 12 15 6"></polyline></svg>
+        </div>
+        <div class="sj-carousel-next">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-right"><polyline points="9 18 15 12 9 6"></polyline></svg>
+        </div>
       </div>
     </div>
     <script type="text/javascript" src="./dist/simple-js-carousel.js"></script>
     <script type="text/javascript">
     window.addEventListener('DOMContentLoaded', () => {
+      // init Carousel
       var carousel = new SJCarousel('.sj-carousel-container', {
         keyboardListenerOnDoc: true
       });
