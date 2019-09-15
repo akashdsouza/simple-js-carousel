@@ -66,6 +66,14 @@ The keyboard listeners are registered on the parent carousel container. To trigg
 
 For cases, where it might make sense to simply attach the event listener to the document instead of the container, set `keyboardListenerOnDoc` to `true`
 
+## Remove all event listeners
+
+You can use any method to hide the carousel html from the web page. A simple way is to set `display: none` on the `sj-carousel-container` element. To remove all the attached event listeners, call `removeEventListeners` on the carousel object returned from `new SJCarousel()`
+
+```js
+carousel.removeEventListeners();
+```
+
 ## Why another carousel?
 
 Carousels are usually used once on a web page. However, there may be cases where a carousel would have to be removed based on user interactions. It is common to set `display: none` on the container element and call it a day. But, depending on your use case, this might lead to a bunch of event listeners which are never removed and start leaking memory.
