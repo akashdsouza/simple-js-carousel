@@ -2,7 +2,7 @@
 
 Before you reach out to a carousel, first consider if you really need it. There are plenty of compeling cases to not use a carousel.
 
-Download the script and include it in your html file.
+Download the script `simple-js-carousel.min.js` in `dist` folder and include it in your html file.
 
 The script expects certain classes to be available by default. For the html, 
 
