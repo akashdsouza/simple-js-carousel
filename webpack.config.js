@@ -10,6 +10,7 @@ module.exports = (env = {}) => {
       filename: production ? 'simple-js-carousel.min.js' : 'simple-js-carousel.js',
       path: path.resolve(__dirname, 'dist'),
       library: 'SJCarousel',
+      libraryTarget: 'umd',
     },
     devServer: {
       contentBase: path.resolve(__dirname, '.'),
