@@ -4,6 +4,12 @@ Before you reach out to a carousel, first consider if you really need it. There 
 
 Download the script `simple-js-carousel.min.js` in `dist` folder and include it in your html file.
 
+## Yarn
+
+```
+yarn add simple-js-carousel
+```
+
 The script expects certain classes to be available by default. For the html, 
 
 ```html
@@ -49,7 +55,7 @@ and the following styles
 The carousel accepts two arguments:
 
 ### Container element selector
-Optional. The container element for the carousel. It defaults to `.sj-carousel-container`. You can pass a custom selector or even a dom node.
+Optional. The container element for the carousel. It defaults to `.sj-carousel-container`. You can pass a custom selector or  a dom node.
 
 ### Options
 - `autoScroll` - Boolean to automatically scroll the carousel as soon as it is rendered. Dafaults to `false`
