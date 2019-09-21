@@ -40,7 +40,7 @@ and the following styles
   transition: transform 1s ease;
 }
 .sj-carousel-slide {
-  flex: 0 0 auto;
+  flex: 0 0 100%;
 }
 ```
 
